@@ -5,7 +5,7 @@
       location = "container:"
       name = "Examples">
       <FileRef
-         location = "group:/Users/cristian/Developer/external/LightControls/source/light-controls/Examples/ControllingLiight/ControllingLight.xcodeproj">
+         location = "group:Examples/ControllingLight/ControllingLight.xcodeproj">
       </FileRef>
    </Group>
    <FileRef
