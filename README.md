@@ -1,2 +1,4 @@
-# light-controls
-RealityKit (iOS &amp; macOS) dynamic light controls
+# LightControls
+Control RealityKit iOS/macOS dynamic light controls
+
+[![Example](https://img.youtube.com/vi/jC6ehrGX7gE/hqdefault.jpg)](https://www.youtube.com/embed/jC6ehrGX7gE)
