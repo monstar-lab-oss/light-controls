@@ -71,6 +71,10 @@ public struct DirectionalLightControl: View {
   }
 }
 
+#Preview {
+  DirectionalLightControl(light: .init())
+}
+
 //MARK: - Light Component
 
 extension DirectionalLightControl {
@@ -95,7 +99,7 @@ extension DirectionalLightControl {
           }
         }
         .pickerStyle(MenuPickerStyle())
-        .accessibilityHint("List of common lux presets to use as Luminance value.")
+        .accessibilityHint("Sets the intensity of light from a list of common lux settings.")
 
         Toggle("Real World Proxy", isOn: $store.isRealWorldProxy)
           .accessibilityHint("Set it to true to cast shadows without illuminating the scene.")
@@ -217,7 +221,7 @@ extension DirectionalLightControl {
           }
         )
         .accessibilityHint(
-          "Avoid shadow acne and self-shadowing changing this value. It ensures the shadow is properly presented and does not intersect with the surface."
+          "Adjusts it to avoid shadow acne and self-shadowing. It ensures the shadow is properly rendered and does not intersect with the surface."
         )
 
         let maximumDistanceRange: ClosedRange<Float> = 0...20
@@ -260,13 +264,9 @@ extension DirectionalLightControl {
           }
         )
         .accessibilityHint(
-          "Sets shadow split distance. It lets you customize shadow rendering to only show at particular distances. This can enhance performance and adjust scene shadows visual appearance."
+          "Sets shadow split distance. It lets customize shadow display to only show at particular distances. This can enhance performance and improve visual appearance."
         )
       }
     }
   }
-}
-
-#Preview {
-  DirectionalLightControl(light: .init())
 }

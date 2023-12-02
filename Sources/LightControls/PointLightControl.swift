@@ -19,57 +19,23 @@ public struct PointLightControl: View {
         isEnabled: pointLight.isEnabled,
         orientation: pointLight.orientation
       )
-    ) { PointLight() }
+    ) {
+      PointLight()
+    }
   }
 
   public var body: some View {
     Form {
-      //MARK: - Light Component
-
-      Section("Light Component") {
-        ColorPicker("Color", selection: $store.color)
-
-        Picker(
-          "Lux Preset",
-          selection: $store.intensity
-        ) {
-          ForEach(Illuminance.allCases, id: \.self) { preset in
-            Group {
-              Text("\(preset.lux, format: .number)")
-                + Text(" (\(preset.description))")
-            }
-            .tag(preset as Illuminance?)
-          }
+      LightComponent(store: store)
+        .onChange(of: store.attenuationRadius) { _, newValue in
+          pointLight.light.attenuationRadius = newValue
         }
-        .pickerStyle(MenuPickerStyle())
-
-        Text("Attenuation Radius: \(store.attenuationRadius, format: .number)")
-        Slider(
-          value: $store.attenuationRadius,
-          in: 0...10,
-          step: 0.01,
-          label: { Text("Attenuation Radius") },
-          minimumValueLabel: {
-            Text("0 m")
-              .font(.caption)
-              .foregroundColor(.secondary)
-          },
-          maximumValueLabel: {
-            Text("10 m")
-              .font(.caption)
-              .foregroundColor(.secondary)
-          }
-        )
-      }
-      .onChange(of: store.attenuationRadius) { _, newValue in
-        pointLight.light.attenuationRadius = newValue
-      }
-      .onChange(of: store.color) { _, newValue in
-        pointLight.light.color = UIColor(newValue)
-      }
-      .onChange(of: store.intensity) { _, newValue in
-        pointLight.light.intensity = Float(newValue.lux)
-      }
+        .onChange(of: store.color) { _, newValue in
+          pointLight.light.color = UIColor(newValue)
+        }
+        .onChange(of: store.intensity) { _, newValue in
+          pointLight.light.intensity = Float(newValue.lux)
+        }
     }
     .toolbar {
       ToolbarItem {
@@ -88,4 +54,59 @@ public struct PointLightControl: View {
 
 #Preview {
   PointLightControl(light: .init())
+}
+
+//MARK: - Light Component
+
+extension PointLightControl {
+  struct LightComponent: View {
+    @Bindable var store: StoreOf<PointLight>
+
+    var body: some View {
+      Section("Light Component") {
+        ColorPicker("Color", selection: $store.color)
+          .accessibilityHint("Sets the LightComponent color attribute.")
+
+        Picker(
+          "Lux Preset",
+          selection: $store.intensity
+        ) {
+          ForEach(Illuminance.allCases, id: \.self) { preset in
+            Group {
+              Text("\(preset.lux, format: .number)")
+                + Text(" (\(preset.description))")
+            }
+            .tag(preset as Illuminance?)
+          }
+        }
+        .pickerStyle(MenuPickerStyle())
+        .accessibilityHint("Sets the intensity of light from a list of common lux settings.")
+
+        Text("Attenuation Radius: \(store.attenuationRadius, format: .number)")
+          .accessibilityHidden(true)
+
+        Slider(
+          value: $store.attenuationRadius,
+          in: 0...10,
+          step: 0.01,
+          label: { Text("Attenuation Radius") },
+          minimumValueLabel: {
+            Text("0 m")
+              .font(.caption)
+              .foregroundColor(.secondary)
+              .accessibilityHidden(true)
+          },
+          maximumValueLabel: {
+            Text("10 m")
+              .font(.caption)
+              .foregroundColor(.secondary)
+              .accessibilityHidden(true)
+          }
+        )
+        .accessibilityHint(
+          "Defines light reach and calculates its falloff. Can greatly affect performance, so it should be used sparingly."
+        )
+      }
+    }
+  }
 }
