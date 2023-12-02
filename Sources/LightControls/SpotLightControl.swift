@@ -3,7 +3,7 @@ import Models
 import RealityKit
 import SwiftUI
 
-public struct SpotLightControlView: View {
+public struct SpotLightControl: View {
   @State private var store: StoreOf<SpotLight>
   let spotLight: RealityKit.SpotLight
 
@@ -183,5 +183,5 @@ public struct SpotLightControlView: View {
 }
 
 #Preview {
-  SpotLightControlView(light: .init())
+  SpotLightControl(light: .init())
 }

@@ -11,8 +11,8 @@
 		40185C442B1894200089E088 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40185C432B1894200089E088 /* ContentView.swift */; };
 		40185C462B1894220089E088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40185C452B1894220089E088 /* Assets.xcassets */; };
 		40185C492B1894220089E088 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40185C482B1894220089E088 /* Preview Assets.xcassets */; };
-		40185C532B18C7A20089E088 /* DirectionalLightControl in Frameworks */ = {isa = PBXBuildFile; productRef = 40185C522B18C7A20089E088 /* DirectionalLightControl */; };
 		40185C552B18DEAC0089E088 /* robot_walk_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 40185C542B18DEAC0089E088 /* robot_walk_idle.usdz */; };
+		40EBD2A22B1B3CF800722B42 /* LightControls in Frameworks */ = {isa = PBXBuildFile; productRef = 40EBD2A12B1B3CF800722B42 /* LightControls */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40185C532B18C7A20089E088 /* DirectionalLightControl in Frameworks */,
+				40EBD2A22B1B3CF800722B42 /* LightControls in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +97,7 @@
 			);
 			name = ControllingLight;
 			packageProductDependencies = (
-				40185C522B18C7A20089E088 /* DirectionalLightControl */,
+				40EBD2A12B1B3CF800722B42 /* LightControls */,
 			);
 			productName = ControllingLiight;
 			productReference = 40185C3E2B1894200089E088 /* ControllingLight.app */;
@@ -367,9 +367,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		40185C522B18C7A20089E088 /* DirectionalLightControl */ = {
+		40EBD2A12B1B3CF800722B42 /* LightControls */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = DirectionalLightControl;
+			productName = LightControls;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

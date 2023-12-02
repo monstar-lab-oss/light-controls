@@ -3,7 +3,7 @@ import Models
 import RealityKit
 import SwiftUI
 
-public struct PointLightControlView: View {
+public struct PointLightControl: View {
   @State private var store: StoreOf<PointLight>
   let pointLight: RealityKit.PointLight
 
@@ -87,5 +87,5 @@ public struct PointLightControlView: View {
 }
 
 #Preview {
-  PointLightControlView(light: .init())
+  PointLightControl(light: .init())
 }

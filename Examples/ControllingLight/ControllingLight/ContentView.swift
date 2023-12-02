@@ -5,7 +5,7 @@
 //  Created by Cristian Díaz on 30.11.23.
 //
 
-import DirectionalLightControl
+import LightControls
 import RealityKit
 import SwiftUI
 
@@ -21,21 +21,21 @@ struct ContentView: View {
       NavigationStack {
         List {
           NavigationLink("DirectionalLight") {
-            DirectionalLightControlView(
+            DirectionalLightControl(
               light: arViewContainer.directionalLight
             )
             .navigationTitle("DirectionalLight")
             .navigationBarTitleDisplayMode(.inline)
           }
           NavigationLink("PointLight") {
-            PointLightControlView(
+            PointLightControl(
               light: arViewContainer.pointLight
             )
             .navigationTitle("PointLight")
             .navigationBarTitleDisplayMode(.inline)
           }
           NavigationLink("SpotLight") {
-            SpotLightControlView(
+            SpotLightControl(
               light: arViewContainer.spotLight
             )
             .navigationTitle("SpotLight")
@@ -86,11 +86,11 @@ struct ARViewContainer: UIViewRepresentable {
 
     // Add lights
     anchor.addChild(directionalLight)
-    
+
     pointLight.transform.translation.x = -0.25
     pointLight.transform.translation.y = 0.25
     anchor.addChild(pointLight)
-    
+
     spotLight.transform.translation.x = 0.25
     spotLight.transform.translation.y = 0.5
     anchor.addChild(spotLight)

@@ -10,8 +10,8 @@ let package = Package(
   ],
   products: [
     .library(
-      name: "DirectionalLightControl",
-      targets: ["DirectionalLightControl"]
+      name: "LightControls",
+      targets: ["LightControls"]
     )
   ],
   dependencies: [
@@ -22,7 +22,7 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "DirectionalLightControl",
+      name: "LightControls",
       dependencies: [
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
         "Models",
