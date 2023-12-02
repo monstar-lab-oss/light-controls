@@ -127,6 +127,9 @@
 				Base,
 			);
 			mainGroup = 40185C352B1894200089E088;
+			packageReferences = (
+				40B6E2C32B1BA51300E6A3A3 /* XCRemoteSwiftPackageReference "light-controls" */,
+			);
 			productRefGroup = 40185C3F2B1894200089E088 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -365,6 +368,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		40B6E2C32B1BA51300E6A3A3 /* XCRemoteSwiftPackageReference "light-controls" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/monstar-lab-oss/light-controls";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		40EBD2A12B1B3CF800722B42 /* LightControls */ = {
