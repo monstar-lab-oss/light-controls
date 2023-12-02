@@ -20,26 +20,34 @@ struct ContentView: View {
     .sheet(isPresented: $isSheetPresented) {
       NavigationStack {
         List {
-          NavigationLink("DirectionalLight") {
+          NavigationLink {
             DirectionalLightControl(
               light: arViewContainer.directionalLight
             )
             .navigationTitle("DirectionalLight")
             .navigationBarTitleDisplayMode(.inline)
+          } label: {
+            Label("DirectionalLight", systemImage: "sun.max")
           }
-          NavigationLink("PointLight") {
+
+          NavigationLink {
             PointLightControl(
               light: arViewContainer.pointLight
             )
             .navigationTitle("PointLight")
             .navigationBarTitleDisplayMode(.inline)
+          } label: {
+            Label("PointLight", systemImage: "lightbulb.min")
           }
-          NavigationLink("SpotLight") {
+
+          NavigationLink {
             SpotLightControl(
               light: arViewContainer.spotLight
             )
             .navigationTitle("SpotLight")
             .navigationBarTitleDisplayMode(.inline)
+          } label: {
+            Label("SpotLight", systemImage: "lamp.desk")
           }
         }
       }
