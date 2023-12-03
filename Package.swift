@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
   name: "light-controls",
+  defaultLocalization: "en",
   platforms: [
     .iOS(.v17)
   ],
@@ -26,6 +27,9 @@ let package = Package(
       dependencies: [
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
         "Models",
+      ],
+      resources: [
+        .process("Resources")
       ]
     ),
     .target(name: "Models"),

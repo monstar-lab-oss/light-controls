@@ -14,6 +14,7 @@ struct ContentView: View {
   let arViewContainer = ARViewContainer()
 
   var body: some View {
+    /*
     ZStack {
       arViewContainer.edgesIgnoringSafeArea(.all)
     }
@@ -54,6 +55,10 @@ struct ContentView: View {
       .interactiveDismissDisabled()
       .presentationDetents([.medium, .height(200)])
     }
+     */
+    PointLightControl(
+      light: arViewContainer.pointLight
+    )
   }
 }
 

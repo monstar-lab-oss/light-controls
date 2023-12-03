@@ -1,0 +1,124 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    " (%@)" : {
+
+    },
+    "%@" : {
+
+    },
+    "%lld" : {
+
+    },
+    "%lldº" : {
+
+    },
+    "0 m" : {
+
+    },
+    "0º" : {
+
+    },
+    "10 m" : {
+
+    },
+    "360º" : {
+
+    },
+    "Adjusts it to avoid shadow acne and self-shadowing. It ensures the shadow is properly rendered and does not intersect with the surface." : {
+
+    },
+    "Attenuation Radius" : {
+
+    },
+    "Attenuation Radius: %@" : {
+
+    },
+    "Color" : {
+
+    },
+    "Defines light reach and calculates its falloff. Can greatly affect performance, so it should be used sparingly." : {
+
+    },
+    "Defines the angle of the cone beyond which the light's intensity is zero, in degrees" : {
+
+    },
+    "Defines the angle of the cone that emits light at full intensity, in degrees" : {
+
+    },
+    "Depth Bias" : {
+
+    },
+    "Depth Bias: %@" : {
+
+    },
+    "Distance: %@" : {
+
+    },
+    "Enabled" : {
+
+    },
+    "Inner Angle" : {
+
+    },
+    "Inner Angle: %@" : {
+
+    },
+    "Light Component" : {
+
+    },
+    "LightComponentColorHint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sets the LightComponent color attribute."
+          }
+        }
+      }
+    },
+    "Lux Preset" : {
+
+    },
+    "Maximum Distance" : {
+
+    },
+    "Orientation" : {
+
+    },
+    "Outer Angle" : {
+
+    },
+    "Outer Angle: %@" : {
+
+    },
+    "Real World Proxy" : {
+
+    },
+    "Rotation X" : {
+
+    },
+    "Rotation X: %@" : {
+
+    },
+    "Rotation Y" : {
+
+    },
+    "Rotation Y: %@" : {
+
+    },
+    "Set it to true to cast shadows without illuminating the scene." : {
+
+    },
+    "Sets shadow split distance. It lets customize shadow display to only show at particular distances. This can enhance performance and improve visual appearance." : {
+
+    },
+    "Sets the intensity of light from a list of common lux settings." : {
+
+    },
+    "Shadow Component" : {
+
+    }
+  },
+  "version" : "1.0"
+}

@@ -84,7 +84,7 @@ extension DirectionalLightControl {
     var body: some View {
       Section("Light Component") {
         ColorPicker("Color", selection: $store.color)
-          .accessibilityHint("Sets the LightComponent color attribute.")
+          .accessibilityHint(String(localized: "LightComponentColorHint", bundle: .module))
 
         Picker(
           "Lux Preset",
